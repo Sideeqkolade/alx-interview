@@ -23,6 +23,6 @@ def validUTF8(data) -> bool:
         else:
             if num >> 6 != 0b10:  # Continuation byte
                 return False
-            bytes_left -= 1
+        bytes_left -= 1
 
     return bytes_left == 0
